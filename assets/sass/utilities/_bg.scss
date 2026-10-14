@@ -1,0 +1,117 @@
+/* hover bg class start */
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade}) !important;
+    }
+  }
+}
+
+// hover background
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .hover-bg-#{$color}-#{$shade} {
+      &:hover {
+        background-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+  }
+}
+
+.hover-bg-white {
+  &:hover {
+    background-color: hsl(var(--white)) !important;
+  }
+}
+
+.bg-white {
+  &-08 {
+    background-color: hsl(var(--white) / 0.08);
+  }
+  &-2 {
+    background-color: hsl(var(--white) / 0.2);
+  }
+}
+
+.bg-gradient-sidebar {
+  background: linear-gradient(80.26deg, #FFDCE9 25.59%, #DDE5FE 108.77%);
+  background: linear-gradient(80.26deg, #ffdce978 25.59%, #dde5fe8a 108.77%);
+  
+}
+
+.bg-red-50 {
+  background-color: #FF1C6A17;
+}
+.bg-blue-50 {
+  background-color: #1C64FF17;
+}
+.bg-green-50 {
+  background-color: #1CFFA417;
+}
+.bg-yellow-50 {
+  background-color: #FF7B1C17;
+}
+
+.bg-navy-black {
+  background-color: #110225;
+}
+
+.bg-navy-black-light {
+  background-color: #241636;
+}
+
+.section-bg {
+  background-color: #EEF3F4;
+}
+
+.bg-pink-50 {
+  background-color: #F8EFEA;
+}
+.bg-slate-100 {
+  background-color: #E3EAE5;
+}
+
+
+.product-bg-1 {
+  background-color: #E1D2FF;
+}
+.product-bg-2 {
+  background-color: #C6E3FF;
+}
+.product-bg-3 {
+  background-color: #D9D9D9;
+}
+.product-bg-4 {
+  background-color: #FFCDD0;
+}
+.banner-bg-light {
+  background-color: #FCF6F9;
+}
+
+
+.promo-banner-service-bg-one {
+  background-color: #E3EAE5;
+}
+
+.promo-banner-service-bg-two {
+  background-color: #F8EFEA;
+}
+
+
+.bg-primary-new {
+  background-color: hsl(var(--primary-new));
+}
+
+.hover-bg-primary-new:hover {
+  background-color: hsl(var(--primary-new)) !important;
+}
+
+.bg-secondary-new {
+  background-color: hsl(var(--secondary-new));
+}
+
+.bg-pink-600 {
+  background-color: #FF4E8D;
+}
+
+/* hover bg class end */

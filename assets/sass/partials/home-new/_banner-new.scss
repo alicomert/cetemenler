@@ -1,0 +1,77 @@
+/* Banner new css start */
+.section-bg-gradient {
+    background: linear-gradient(360deg, rgba(115, 92, 252, 0) 0%, rgba(115, 92, 252, 0.08) 25%, rgba(115, 92, 252, 0.16) 50%, rgba(115, 92, 252, 0.08) 75%, rgba(115, 92, 252, 0) 100%);
+}
+
+.writing-mode-lr {
+    writing-mode: sideways-lr;
+}
+
+.max-width-img {
+    max-width: 25%;
+}
+
+.banner-title {
+    font-size: 40px;
+    line-height: 1.4;
+
+    @media (min-width: 425px) {
+        font-size: 52px;
+        line-height: 1.4;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 80px;
+    }
+}
+
+.typed-text-wrapper {
+    width: 170px;
+
+    @media (min-width: 425px) {
+        width: 230px;
+    }
+
+    @media (min-width: 768px) {
+        width: 340px;
+    }
+}
+
+
+
+.banner-element-1 {
+    inset-inline-start: 60px;
+    top: 4%;
+}
+
+.banner-element-2 {
+    inset-inline-start: 11%;
+    top: 6%;
+}
+
+.banner-element-3 {
+    top: 17%;
+    inset-inline-start: 6%;
+}
+
+.banner-element-4 {
+    top: 30%;
+    inset-inline-start: 4%;
+}
+
+.banner-element-5 {
+    inset-inline-end: 16%;
+    top: 4%;
+}
+
+.banner-element-6 {
+    inset-inline-end: 0;
+    top: 32px;
+}
+
+.banner-element-7 {
+    inset-inline-end: 138px;
+    top: 242px;
+}
+
+/* Banner new css end */

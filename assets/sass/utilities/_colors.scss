@@ -1,0 +1,72 @@
+
+/* Colors class start */
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      .text-#{$color}-#{$shade} {
+        color: var(--#{$color}-#{$shade});
+      }
+    }
+  }
+  
+.text {
+    &--white {
+      color: hsl(var(--white));
+    }
+    &-heading {
+      color: hsl(var(--heading-color));
+    }
+    &-body {
+      color: hsl(var(--body-color)) !important;
+    }
+    &-main {
+      color: var(--main-600);
+    }
+    &-pink-600 {
+      color: #FF1C6A;
+    }
+}
+
+.text-primary-new {
+  color: hsl(var(--primary-new));
+}
+.text-secondary-new {
+  color: hsl(var(--secondary-new));
+}
+
+
+.text-body {
+  &-1 {
+    color: #B9B9B9;
+  }
+  &-2 {
+    color: #989898;
+  }
+  &-3 {
+    color: #7F7F7F;
+  }
+  &-4 {
+    color: #666666;
+  }
+  &-5 {
+    color: #4D4D4D;
+  }
+  &-6 {
+    color: #4B4B4B;
+  }
+  &-7 {
+    color: #121535;
+  }
+  &-8 {
+    color: #121535;
+  }
+  &-9 {
+    color: #222222;
+  }
+  &-10 {
+    color: #F2F2F2;
+  }
+  &-11 {
+    color: #AAAAAA;
+  }
+}
+/* Colors class End */

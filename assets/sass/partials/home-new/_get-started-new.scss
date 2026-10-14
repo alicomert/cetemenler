@@ -1,0 +1,24 @@
+/* Get started new css start */
+.get-started-product-box {
+    border-radius: 24px 24px 0 0;
+    @media (min-width: 992px) {
+        border-radius: 0 24px 0 ;
+        position: absolute;
+        max-width: 678px;
+        inset-inline-start: 0;
+        max-width: 44%;
+        height: 100%;
+    }
+}
+
+.get-started-item-wrapper {
+    max-height: 740px;
+    overflow-y: auto;
+    padding-inline-end: 48px;
+    direction: rtl;
+}
+
+.get-started-item-wrapper > * {
+    direction: ltr;
+}
+/* Get started new css end */

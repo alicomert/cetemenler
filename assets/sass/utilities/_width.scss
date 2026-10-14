@@ -1,0 +1,47 @@
+/* width Css Class start */
+@each $property, $value in $spaces {
+  .tw-w-#{$property} {
+    width: $value;
+  }
+}
+
+.min-w-max {
+  min-width: max-content;
+}
+
+.tw-w {
+  &-px {
+    width: 1px;
+  }
+  &-74-px {
+    width: 74px;
+  }
+  &-88-px {
+    width: 88px;
+  }
+  &-300-px {
+    width: 300px;
+  }
+  &-90-px {
+    width: 90px;
+  }
+  &-100-px {
+    width: 100px;
+  }
+  &-116-px {
+    width: 116px;
+  }
+  &-130-px {
+    width: 130px;
+  }
+  &-160-px {
+    width: 160px;
+  }
+  &-340-px {
+    width: 340px;
+  }
+  &-w-max {
+    width: max-content;
+  }
+}
+/* width Css Class End */

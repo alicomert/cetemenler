@@ -1,0 +1,110 @@
+/* Service New section css start  */
+.rounded-left-right-shape {
+    position: relative;
+}
+
+.rounded-left-right-shape::before,
+.rounded-left-right-shape::after {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 24px;
+    box-shadow: 10px 10px #fff;
+    border-radius: 50%;
+    inset-inline-end: -23px;
+    top: calc(39% + 1px);
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.rounded-left-right-shape::after {
+    inset-inline-end: auto;
+    inset-inline-start: -22px;
+    transform: rotate(0deg);
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.tw--mt-45-px {
+    margin-bottom: -45px;
+}
+
+
+.gradient-outline-bg-white::after {
+    position: absolute;
+    content: "";
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background: #fff;
+    border-radius: inherit;
+    top: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+.gradient-outline-bg-white:hover::after {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.gradient-outline-bg-white:hover .text-gradient-main {
+    background: #fff !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+.service-small-image-wrapper {
+    position: absolute;
+    inset-inline-start: 67%;
+    top: 0;
+
+    .swiper-slide {
+        height: 200px !important;
+    }
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(2), .service-small-image-wrapper .swiper-slide:nth-child(3), .service-small-image-wrapper .swiper-slide:nth-child(4), .service-small-image-wrapper .swiper-slide:nth-child(5), .service-small-image-wrapper .swiper-slide:nth-child(6) {
+    margin-top: -127px;
+}
+
+
+
+
+.service-small-image-wrapper .swiper-slide {
+    transition: .3s linear;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(2) {
+    margin-inline-start: 76px;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(3) {
+    margin-inline-start: 152px; /* 76 * 2 */
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(4) {
+    margin-inline-start: 228px; /* 76 * 3 */
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(5) {
+    margin-inline-start: 304px; /* 76 * 4 */
+}
+
+.service-small-image-wrapper .swiper-slide:last-child {
+    margin-inline-start: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 0;
+}
+.service-small-image-item {
+    margin: 2px;
+    outline: 2px solid transparent;
+    display: inline-block;
+}
+
+.swiper-slide.swiper-slide-thumb-active .service-small-image-item {
+    outline-color: hsl(var(--primary-new));
+    border-color: hsl(var(--primary-new)) !important;
+}
+
+/* Service New section css end  */

@@ -1,0 +1,130 @@
+.swiper-pagination .swiper-pagination-bullet {
+    width: 50px;
+    height: 6px;
+    background-color: #D9D9D9;
+    transition: 0.3s ease-in-out;
+    border-radius: 50rem;
+    opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 80px;
+    background-color: var(--main-600);
+}
+
+
+.shop-small-thumbs .swiper-slide-thumb-active>div {
+    border-color: var(--main-600) !important;
+    outline: 3px solid var(--main-600) !important;
+}
+
+.shop-small-thumbs .swiper-slide {
+    padding: 4px;
+}
+
+
+/* Active slider animation css start */
+.active-slider-animate-little-updown {
+    transform: translateY(40px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.active-slider-animate-scalation {
+    transform: scale(.9);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.active-slider-animate-updown {
+    transform: translateY(60%);
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 900ms !important;
+}
+
+.transition-bounce {
+    transition: cubic-bezier(0.34, 1.44, 0.64, 1);
+}
+
+.animated-slider-wrapper .swiper-slide {
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s;
+}
+
+.animated-slider-wrapper .swiper-slide-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.animated-slider-wrapper .swiper-slide-active {
+    .transition-delay-02 {
+        transition-delay: .2s !important;
+    }
+    .transition-delay-03 {
+        transition-delay: .3s !important;
+    }
+
+    .transition-delay-04 {
+        transition-delay: .4s !important;
+    }
+
+    .transition-delay-05 {
+        transition-delay: .5s !important;
+    }
+
+    .transition-delay-06 {
+        transition-delay: .6s !important;
+    }
+
+    .transition-delay-07 {
+        transition-delay: .7s !important;
+    }
+
+    .transition-delay-08 {
+        transition-delay: .8s !important;
+    }
+
+    .transition-delay-09 {
+        transition-delay: .9s !important;
+    }
+
+    .transition-delay-1 {
+        transition-delay: 1s !important;
+    }
+
+    .transition-delay-12 {
+        transition-delay: 1.2s !important;
+    }
+
+    .transition-delay-105 {
+        transition-delay: 1.5s !important;
+    }
+
+    .transition-delay-2 {
+        transition-delay: 2s !important;
+    }
+}
+
+.animated-slider-wrapper .swiper-slide-active {
+    .active-slider-animate-little-updown {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .active-slider-animate-scalation {
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .active-slider-animate-updown {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Active slider animation css end */

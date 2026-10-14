@@ -1,0 +1,36 @@
+/* CTA new section css start */
+@media (min-width: 992px) {
+
+    .cta-new-left {
+        width: 41%;
+    }
+
+    .cta-new-right {
+        width: 59%;
+    }
+}
+
+
+@media (min-width: 575px) {
+    .cta-content {
+        &-left {
+            width: 50%;
+        }
+
+        &-right {
+            width: 50%;
+        }
+    }
+}
+
+.contact-new-contact {
+    margin-top: 80px;
+    z-index: 1;
+
+    @media (min-width: 992px) {
+        margin-top: -123px;
+        position: relative;
+    }
+}
+
+/* CTA new section css end */

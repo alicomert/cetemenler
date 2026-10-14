@@ -1,0 +1,25 @@
+/* Brand new css start */
+.brand-new-item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (min-width: 575px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.brand-new-item {
+    height: 120px;
+    border-inline-end: 1px solid var(--neutral-100);
+    border-bottom: 1px solid var(--neutral-100);
+}
+
+
+@media (max-width: 991px) {
+    .sm-style-none {
+        border: 0 !important;
+    }
+    .brand-new-item-wrapper {
+        border-top: 1px solid var(--neutral-100);
+    }
+}
+/* Brand new css end */

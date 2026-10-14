@@ -1,0 +1,60 @@
+// border
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .border-#{$color}-#{$shade} {
+      border-color: var(--#{$color}-#{$shade}) !important;
+    }
+  }
+}
+
+// hover border
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .hover-border-#{$color}-#{$shade} {
+      &:hover {
+        border-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+  }
+}
+
+// focus border
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .focus-border-#{$color}-#{$shade} {
+      &:focus {
+        border-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+  }
+}
+
+.tw-border {
+  &-dashed {
+    border-style: dashed !important;
+  }
+}
+
+.border-primary-new {
+  border-color: hsl(var(--primary-new)) !important;
+}
+.focus-border-primary-new:focus {
+  border-color: hsl(var(--primary-new)) !important;
+}
+
+
+.border-pink-600 {
+  border-color: #FF1C6A !important;
+}
+
+.border-white-39 {
+  border-color: #ffffff59 !important;
+}
+
+.border-white-16 {
+  border-color: #ffffff29 !important;
+}
+
+.border-transparent {
+  border-color: transparent !important;
+}

@@ -1,0 +1,20 @@
+/* Box shadow start */
+.common-shadow {
+  box-shadow: 0 6px 30px 0px #0000000a;
+  &-one {
+    box-shadow: 9px 10px 87.1px 0px #41071B14;
+  }
+  &-two {
+    box-shadow: 0px 6px 30px 0px #0000000A;
+  }
+}
+
+.hover-shadow {
+  &-one {
+    &:hover {
+      box-shadow: 9px 10px 87.1px 0px #41071B14;
+    }
+  }
+}
+
+/* Box shadow End */

@@ -1,0 +1,86 @@
+/* About new css start */
+.about-img-wrapper {
+    position: absolute;
+    padding-inline-start: 154px;
+    padding-inline-end: 122px;
+    padding-bottom: 96px;
+    inset-inline-start: 53%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 1364px) {
+        inset-inline-start: 46%;
+    }
+}
+
+.about-img-two {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 1;
+}
+
+.about-img-three {
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.border-first-style-one {
+    width: 2px;
+    height: 347px;
+    background: #735CFC;
+    position: absolute;
+    inset-inline-start: 80px;
+    top: 33%;
+    z-index: -1;
+}
+
+.border-first-style-two {
+    width: 2px;
+    height: 288px;
+    background: #735CFC;
+    position: absolute;
+    inset-inline-start: 112px;
+    top: 33%;
+    z-index: -1;
+}
+
+.border-second-style-one {
+    width: 2px;
+    height: 444px;
+    background: #735CFC;
+    position: absolute;
+    inset-inline-end: 41px;
+    bottom: 33%;
+    z-index: -1;
+}
+
+.border-second-style-two {
+    width: 2px;
+    height: 344px;
+    background: #735CFC;
+    position: absolute;
+    inset-inline-end: 73px;
+    bottom: 33%;
+    z-index: -1;
+}
+
+.border-red {
+    background: #DD1D29;
+}
+
+.border-blue {
+    background: hsl(var(--primary-new));
+}
+
+.about-img-two {
+    max-width: 42%;
+}
+
+.about-img-three {
+    max-width: 49%;
+}
+
+/* About new css end */

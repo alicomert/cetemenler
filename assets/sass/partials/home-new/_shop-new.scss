@@ -1,0 +1,15 @@
+/* Shop css start */
+.category-sidebar-btn.active {
+    background-color: hsl(var(--primary-new)) !important;
+    .category-sidebar-btn__text {
+        color: #fff;
+    }
+    .category-sidebar-btn__icon {
+        color: #fff;
+    }
+}
+
+.wishlist-btn.active i {
+    font-family: "Phosphor-Fill" !important;
+}
+/* Shop css end */

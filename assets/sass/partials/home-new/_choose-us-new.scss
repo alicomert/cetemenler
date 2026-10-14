@@ -1,0 +1,40 @@
+/* Choose us new css start */
+@media (min-width: 1199px) {
+    .choose-us-new-counter::before {
+        position: absolute;
+        content: "";
+        inset-inline-start: 0;
+        height: 64%;
+        width: 3px;
+        background: #735CFC;
+        opacity: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .choose-us-new-counter-item {
+        padding-left: 80px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: blue;
+            border-radius: 50%;
+            inset-inline-start: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+}
+
+.all-info-item:not(:first-child) {
+    @media (max-width: 992px) {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+/* Choose us new css end */

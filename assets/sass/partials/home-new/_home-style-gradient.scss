@@ -1,0 +1,84 @@
+.font-size-style-new {
+    &:root {
+        --heading-one: clamp(2.25rem, 0.7133rem + 3.5vw, 3rem); // Min: 36px - Max: 48px
+        --heading-two: clamp(2rem, 0.7133rem + 3.5vw, 2.5rem); // Min: 32px - Max: 40px
+        --heading-three: clamp(1.75rem, 0.3353rem + 2.5vw, 2rem); // Min: 28px - Max: 32px
+        --heading-four: clamp(1.25rem, 0.5569rem + 2vw, 1.5rem); // Min: 20px - Max: 24px
+        --heading-five: 1.25rem; // 20px
+        --heading-six: 1rem; // 16px
+
+        --gradient-main: linear-gradient(90deg, #FF4E8D 0%, #AF35E7 50%, #4C82FC 100%);
+
+        --body-font: "DM Sans", sans-serif;
+    }
+}
+
+.display-5 {
+    font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem); // Min: 40px - Max: 56px
+}
+
+
+.home-style-gradient {
+    .section-bg {
+        background: #735CFC0D;
+    }
+
+    .bg-main-600 {
+        background: var(--gradient-main);
+
+        &:hover {
+            color: #fff !important;
+        }
+    }
+
+    .hover-bg-animation::before {
+        background: var(--gradient-main);
+        transform: rotate(180deg);
+    }
+
+    .settings-panel__button.active {
+        background-color: hsl(var(--primary-new)) !important;
+        background: var(--gradient-main);
+    }
+}
+
+.text-gradient-main {
+    background: var(--gradient-main) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.hover-icon-white:hover .btn-icon-animation {
+    background: #fff !important;
+
+    i {
+        background: var(--gradient-main) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+}
+
+.hover-animate-text-white:hover .text-gradient-main {
+    background: #ffffff00 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+.text-stroke {
+    font-weight: 600;
+    line-height: 120%;
+    opacity: 0.24;
+    color: transparent;
+    -webkit-text-stroke: 1px hsl(var(--primary-new));
+}
+
+.text-stroke:hover {
+    color: hsl(var(--primary-new));
+    -webkit-text-stroke: 2px hsl(var(--primary-new));
+}
+
+
+.section-bg-gradient-two {
+    background: linear-gradient(360deg, rgba(115, 92, 252, 0.04) 0%, rgba(115, 92, 252, 0.12) 25%, rgba(115, 92, 252, 0.2) 50%, rgba(115, 92, 252, 0.12) 75%, rgba(115, 92, 252, 0.04) 100%);
+}

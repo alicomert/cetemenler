@@ -1,0 +1,131 @@
+/* whole banner section start */
+.sidebar-list-item {
+    &:not(:last-child) {
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    &:hover {
+        .sidebar-dropdown-menu {
+            margin-top: 0;
+        }
+    }
+}
+
+.mash-gradient-shape {
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 309px;
+        height: 309px;
+        top: 150px;
+        inset-inline-start: 110px;
+        opacity: 1;
+        background: #FEAE007D;
+        filter: blur(244px);
+        z-index: -1;
+    }
+
+    &::after {
+        background: #1EE8FF7A;
+        inset-inline-start: 50%;
+    }
+}
+
+
+.banner-inner__sidebar {
+    @media (max-width: 1199px) {
+        background-color: #fff;
+        position: fixed;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        width: 100%;
+        z-index: 999;
+        max-height: 100vh;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: .3s linear;
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+.sidebar-dropdown-menu {
+    @media (max-width: 1199px) {
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        box-shadow: none !important;
+        display: none;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+
+.banner-demand {
+    @media (min-width: 922px) {
+        padding: 100px 0;
+    }
+
+    @media (min-width: 922px) {
+        padding: 120px 0;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 142px 0;
+    }
+}
+
+.banner-demand__thumb {
+    max-width: 50%;
+}
+
+
+
+.banner-home-service {
+    @media (max-width: 992px) {
+        overflow: hidden;
+    }
+}
+
+.button-responsive-class .btn {
+    @media (max-width: 575px) {
+        padding-inline: 20px;
+    }
+}
+
+.mash-gradient-bottom {
+    &::before {
+        position: absolute;
+        content: "";
+        width: 309px;
+        height: 309px;
+        bottom: 80px;
+        inset-inline-start: 38%;
+        opacity: 1;
+        background: #FEAE007D;
+        filter: blur(244px);
+        z-index: -1;
+    }
+}
+
+
+.area-bg {
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    background-color: var(--main-600);
+    border-radius: 100%;
+    z-index: -1;
+    left: 48%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+/* whole banner section end */
