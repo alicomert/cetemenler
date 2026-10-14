@@ -28,8 +28,9 @@ breaks GSAP ScrollSmoother / AOS because they measure real layout.
 - `assets/sass/layout/_slick.scss` is **not** imported by `layout/_index.scss`, and no Slick
   library is loaded anywhere. Dead file. Carousels are Swiper
   (`components/_slider.scss` + `swiper-bundle.min.js`).
-- The `layout/_preloader.scss` and `layout/_custom-cursor.scss` partials were deleted along with
-  their features. Don't re-add them.
+- The `layout/_preloader.scss`, `layout/_custom-cursor.scss` and `layout/_blur-bottom-shadow.scss`
+  partials were deleted along with their features (and their markup hooks removed from all 19
+  pages). Don't re-add them.
 - Animation hook classes such as `.custom-fade-animation`, `.text-reveal`, `.animated-title`,
   `.splitTextStyleOne`, `.card-animation` and `.move-on-cursor-hover` are **left in the markup but
   have no CSS and no JS**. They are inert, and `move-on-cursor-hover` elements now sit still
@@ -64,6 +65,32 @@ All other pages have `<html class="">`.
   those to re-tint the whole site; don't hardcode hex in pages.
 - RTL overrides live in `partials/_rtl.scss` under `[dir="rtl"]` (the settings panel toggles
   `dir` at runtime). Broken-in-RTL fixes go there.
+
+## Language: site copy is Turkish
+
+- All 19 pages are in Turkish (`<html lang="tr">`), translated from the original English template.
+  Brand names, person names, e-mail addresses and fictional US addresses were intentionally left
+  as-is.
+- **Lorem-ipsum filler is deliberately still Latin/English.** Four blocks remain
+  (`Pellentesque vulputate`, `At tempus aenean`, `Far far away...`, `Quisque pulvinar facilisi`).
+  Do not translate them; they are placeholder text.
+- Prices use Turkish formatting: `29,99 ₺` (comma decimal, lira symbol **after** the amount).
+  The currency `<select>` is a single `TRY (₺)` option and exists only on `index.html`,
+  `shop-new.html`, `shop-details-new.html`.
+- **Numbers inside `class="counter"` elements use a period** (`55.6`, `25.4`) because
+  `counterup.min.js` parses them with `parseFloat`. Changing them to a comma silently breaks the
+  animated counters.
+- If you add new English copy, translate it too — the site has no runtime translation layer.
+
+## Editing text across pages
+
+There is no templating, so a shared string (nav item, footer line, button label) exists in all 19
+files. Use one scripted multi-file replace and verify the hit count equals 19 (or the number of
+pages that actually contain it). Never hand-edit the same sentence in 19 files.
+
+When writing Turkish strings from a **PowerShell script**, put them in a UTF-8 data file and read
+it with `Get-Content -Encoding utf8`. Windows PowerShell reads a BOM-less `.ps1` file as
+Windows-1252, which silently turns `ö` into `Ã¶` and writes that mojibake into the HTML.
 
 ## JS: what actually loads
 
