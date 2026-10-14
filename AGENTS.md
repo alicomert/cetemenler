@@ -92,6 +92,40 @@ When writing Turkish strings from a **PowerShell script**, put them in a UTF-8 d
 it with `Get-Content -Encoding utf8`. Windows PowerShell reads a BOM-less `.ps1` file as
 Windows-1252, which silently turns `ö` into `Ã¶` and writes that mojibake into the HTML.
 
+## Home page variants
+
+| Page | Header + hero | Body |
+|---|---|---|
+| `index.html` | new design | `partials/home-new/*` |
+| `index-2.html` | old design | `partials/home-one/*` |
+| `index-3/4.html` | old design | `home-one`-derived |
+| `index-5.html` | **from `index.html`** (header + `banner-new` hero) | **from `index-4.html`** (Brand -> footer, old design footer) |
+
+`index-5.html` was assembled by splicing raw source: `index.html` up to the `Banner section end`
+marker, then `index-4.html` from its `Brand section start` marker to EOF. That works because
+`index.html` opens `#smooth-wrapper`/`#smooth-content` before its header while `index-4.html` closes
+them after its footer, so part B supplies the matching `</div></div>`. If you re-splice, re-check
+`div` / `section` / `footer` balance.
+
+Note that on `index-5.html` the header (new design) and the footer (`class="footer"`, old design)
+come from different generations on purpose. Both stylesets ship in `main.css`.
+
+## Overflow: Turkish copy is wider than English
+
+`.instagram-post` has a decorative heading centred with `min-w-max` + `translateX(-50%)`, so its
+width is its intrinsic text width. The original `.text-160-px`
+(`clamp(6rem, 0.3353rem + 10.1661vw, 10rem)`) was tuned for "INSTAGRAM POST"; the Turkish
+"INSTAGRAM GÖNDERİSİ" is ~38% longer and overflowed the viewport by 175px on 17 pages.
+`partials/home-one/_instagram-post.scss` now caps it with `clamp(5rem, 8.2vw, 10rem)`.
+
+**When you translate a heading like this, re-measure.** Any `min-w-max` + `start-50
+translate-middle-x` heading with a large font can reintroduce a horizontal scrollbar. Verify with
+headless Chrome and compare `document.documentElement.scrollWidth` against `clientWidth`:
+
+```
+chrome --headless --window-size=1440,900 --virtual-time-budget=5000 --dump-dom <file-url>
+```
+
 ## JS: what actually loads
 
 All 19 pages load the **same 10 scripts in the same order** (verified identical).

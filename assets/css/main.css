@@ -6183,6 +6183,27 @@ input[type=range]::-moz-range-thumb:hover {
 }
 
 /* ================================= Features home service section end ================================= */
+/* Instagram post section start */
+.instagram-post {
+  /*
+   * The decorative heading inside this section is centred with
+   * `min-w-max` + `translateX(-50%)`, so its width is its intrinsic text width.
+   *
+   * `.text-160-px` is `clamp(6rem, 0.3353rem + 10.1661vw, 10rem)`. This copy is
+   * Turkish and ~38% longer than the original English ("INSTAGRAM GÖNDERISI"
+   * vs "INSTAGRAM POST"), which pushed the intrinsic width past the viewport
+   * and produced a horizontal scrollbar on every page that has this section.
+   *
+   * Measured ratio is width/font-size = 11.72, so 8.2vw keeps the heading
+   * inside the viewport at every lg+ breakpoint while keeping the oversized
+   * look. It is capped at the original 10rem so it never grows past the design.
+   */
+}
+.instagram-post h2.min-w-max {
+  font-size: clamp(5rem, 8.2vw, 10rem);
+}
+
+/* Instagram post section end */
 .font-size-style-new:root {
   --heading-one: clamp(2.25rem, 0.7133rem + 3.5vw, 3rem);
   --heading-two: clamp(2rem, 0.7133rem + 3.5vw, 2.5rem);
